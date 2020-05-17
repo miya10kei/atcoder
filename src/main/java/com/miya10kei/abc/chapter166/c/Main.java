@@ -1,5 +1,6 @@
 package com.miya10kei.abc.chapter166.c;
 
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
@@ -28,6 +29,8 @@ public class Main {
                 count++;
             }
         }
-        System.out.println(count);
+        var writer = new PrintWriter(System.out);
+        writer.println(count);
+        writer.flush();
     }
 }
