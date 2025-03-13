@@ -1,12 +1,12 @@
 A, B, C, X, Y = map(int, input().split())
 
-ans = 0
+answer = 0
 if (A + B) < C * 2:
-    ans = A * X + B * Y
+    answer = A * X + B * Y
 else:
-    ans += C * (min(X, Y) * 2)
+    answer += C * (min(X, Y) * 2)
     if X > Y:
-        ans += A * (X - Y)
+        answer += min(A * (X - Y), 2 * C * (X - Y))
     elif X < Y:
-        ans += B * (Y - X)
-print(ans)
+        answer += min(B * (Y - X), 2 * C * (Y - X))
+print(answer)
